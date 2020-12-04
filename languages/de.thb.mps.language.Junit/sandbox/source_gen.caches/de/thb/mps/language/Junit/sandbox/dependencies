@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="de.thb.mps.language.Junit.sandbox.RechnerTest">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="org.junit.Before" />
+    <classNode dependClassName="org.junit.Test" />
+  </dependency>
+</dependenciesRoot>
+
