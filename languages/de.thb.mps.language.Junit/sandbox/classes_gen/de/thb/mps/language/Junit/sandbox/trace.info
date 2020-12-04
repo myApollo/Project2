@@ -6,14 +6,14 @@
   <root nodeRef="r:3f55ce5e-2ce7-4540-b143-48b6a50d2dc1(de.thb.mps.language.Junit.sandbox)/4542291309769520421">
     <file name="RechnerTest.java">
       <node id="4542291309769520421" at="10,0,11,0" concept="1" trace="underTest" />
-      <node id="4542291309769520421" at="13,40,14,34" concept="0" />
-      <node id="457014410339087791" at="17,0,20,0" concept="2" trace="Rechner#()V" />
-      <node id="4542291309769520421" at="12,0,16,0" concept="2" trace="setUp#()V" />
-      <scope id="457014410339087791" at="18,25,18,25" />
-      <scope id="4542291309769520421" at="13,40,14,34" />
-      <scope id="457014410339087791" at="17,0,20,0" />
-      <scope id="4542291309769520421" at="12,0,16,0" />
-      <unit id="4542291309769520421" at="8,0,21,0" name="de.thb.mps.language.Junit.sandbox.RechnerTest" />
+      <node id="4542291309769520421" at="14,40,15,34" concept="0" />
+      <node id="457014410339087791" at="18,0,21,0" concept="2" trace="Rechner#()V" />
+      <node id="4542291309769520421" at="13,0,17,0" concept="2" trace="setUp#()V" />
+      <scope id="457014410339087791" at="19,25,19,25" />
+      <scope id="4542291309769520421" at="14,40,15,34" />
+      <scope id="457014410339087791" at="18,0,21,0" />
+      <scope id="4542291309769520421" at="13,0,17,0" />
+      <unit id="4542291309769520421" at="8,0,22,0" name="de.thb.mps.language.Junit.sandbox.RechnerTest" />
     </file>
   </root>
 </debug-info>

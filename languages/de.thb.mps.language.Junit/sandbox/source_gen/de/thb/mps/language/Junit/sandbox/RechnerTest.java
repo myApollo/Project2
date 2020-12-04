@@ -9,6 +9,7 @@ public class RechnerTest {
 
   private RechnerTest underTest;
 
+
   @Before
   public void setUp() throws Exception {
     underTest = new RechnerTest();
