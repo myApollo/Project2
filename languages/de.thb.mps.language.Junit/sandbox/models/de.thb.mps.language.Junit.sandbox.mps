@@ -52,5 +52,9 @@
       </node>
     </node>
   </node>
+  <node concept="3kvOla" id="79wRqA8imNw">
+    <property role="TrG5h" value="Test" />
+    <node concept="1naJQY" id="79wRqA8imNx" role="1naJGI" />
+  </node>
 </model>
 

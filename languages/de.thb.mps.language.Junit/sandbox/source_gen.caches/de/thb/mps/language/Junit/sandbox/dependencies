@@ -5,5 +5,10 @@
     <classNode dependClassName="org.junit.Before" />
     <classNode dependClassName="org.junit.Test" />
   </dependency>
+  <dependency className="de.thb.mps.language.Junit.sandbox.Test">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="org.junit.Before" />
+    <classNode dependClassName="org.junit.Test" />
+  </dependency>
 </dependenciesRoot>
 
