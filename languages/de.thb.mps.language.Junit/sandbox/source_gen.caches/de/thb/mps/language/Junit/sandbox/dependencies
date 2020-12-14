@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="de.thb.mps.language.Junit.sandbox.RechnerTest">
+    <classNode dependClassName="de.thb.mps.language.Junit.sandbox.Rechner2" />
     <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="org.junit.Before" />
-    <classNode dependClassName="org.junit.Test" />
-  </dependency>
-  <dependency className="de.thb.mps.language.Junit.sandbox.Test">
-    <classNode dependClassName="java.lang.Exception" />
-    <classNode dependClassName="org.junit.Before" />
-    <classNode dependClassName="org.junit.Test" />
   </dependency>
 </dependenciesRoot>
 

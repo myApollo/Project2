@@ -10,6 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_EqualsAssert;
+  private ConceptPresentation props_EqualsAssertReference;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestCase;
   private ConceptPresentation props_TestedClass;
@@ -27,6 +28,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EqualsAssert = cpb.create();
         }
         return props_EqualsAssert;
+      case LanguageConceptSwitch.EqualsAssertReference:
+        if (props_EqualsAssertReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x511728d921a134bdL, 0x511728d921a16655L, "field", "", "");
+          props_EqualsAssertReference = cpb.create();
+        }
+        return props_EqualsAssertReference;
       case LanguageConceptSwitch.Test:
         if (props_Test == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
