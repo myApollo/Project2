@@ -3,30 +3,26 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
-  <root nodeRef="r:3f55ce5e-2ce7-4540-b143-48b6a50d2dc1(de.thb.mps.language.Junit.sandbox)/4542291309769520421">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <root nodeRef="r:3f55ce5e-2ce7-4540-b143-48b6a50d2dc1(de.thb.mps.language.Junit.sandbox)/5843183954577415384">
     <file name="RechnerTest.java">
-      <node id="4542291309769520421" at="10,0,11,0" concept="1" trace="underTest" />
-      <node id="4542291309769520421" at="13,40,14,34" concept="0" />
-      <node id="457014410339087791" at="18,0,21,0" concept="2" trace="Rechner#()V" />
-      <node id="4542291309769520421" at="12,0,16,0" concept="2" trace="setUp#()V" />
-      <scope id="457014410339087791" at="19,25,19,25" />
-      <scope id="4542291309769520421" at="13,40,14,34" />
-      <scope id="457014410339087791" at="18,0,21,0" />
-      <scope id="4542291309769520421" at="12,0,16,0" />
-      <unit id="4542291309769520421" at="8,0,22,0" name="de.thb.mps.language.Junit.sandbox.RechnerTest" />
-    </file>
-  </root>
-  <root nodeRef="r:3f55ce5e-2ce7-4540-b143-48b6a50d2dc1(de.thb.mps.language.Junit.sandbox)/8241831038293732576">
-    <file name="Test.java">
-      <node id="8241831038293732576" at="9,0,10,0" concept="1" trace="underTest" />
-      <node id="8241831038293732576" at="12,40,13,27" concept="0" />
-      <node id="8241831038293732577" at="17,0,20,0" concept="2" trace="null#()V" />
-      <node id="8241831038293732576" at="11,0,15,0" concept="2" trace="setUp#()V" />
-      <scope id="8241831038293732577" at="18,18,18,18" />
-      <scope id="8241831038293732576" at="12,40,13,27" />
-      <scope id="8241831038293732577" at="17,0,20,0" />
-      <scope id="8241831038293732576" at="11,0,15,0" />
-      <unit id="8241831038293732576" at="7,0,21,0" name="de.thb.mps.language.Junit.sandbox.Test" />
+      <node id="5843183954577447745" at="14,0,15,0" concept="1" trace="underTest" />
+      <node id="5843183954577415384" at="18,40,19,31" concept="0" />
+      <node id="4660427476347491107" at="27,18,28,33" concept="3" />
+      <node id="4660427476347491107" at="28,33,29,7" concept="4" />
+      <node id="4660427476347491107" at="29,7,30,34" concept="0" />
+      <node id="4660427476347491107" at="30,34,31,0" concept="5" />
+      <node id="5843183954577415384" at="17,0,21,0" concept="2" trace="setUp#()V" />
+      <node id="4660427476347491107" at="26,0,33,0" concept="2" trace="null#()V" />
+      <scope id="5843183954577415384" at="18,40,19,31" />
+      <scope id="5843183954577415384" at="17,0,21,0" />
+      <scope id="4660427476347491107" at="27,18,31,0">
+        <var name="result" id="4660427476347491107" />
+      </scope>
+      <scope id="4660427476347491107" at="26,0,33,0" />
+      <unit id="5843183954577415384" at="12,0,36,0" name="de.thb.mps.language.Junit.sandbox.RechnerTest" />
     </file>
   </root>
 </debug-info>

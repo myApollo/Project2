@@ -4,18 +4,32 @@ package de.thb.mps.language.Junit.sandbox;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
 
+/**
+ * 
+ */
 public class RechnerTest {
 
-  private RechnerTest underTest;
+  private Rechner2 underTest;
+
 
   @Before
   public void setUp() throws Exception {
-    underTest = new RechnerTest();
+    underTest = new Rechner2();
   }
+
+
+
 
 
   @Test
-  public void Rechner() {
+  public void () {
+    int result = underTest.???();
+    // 
+    Assert.assertEquals(, result);
+
   }
+
+
 }

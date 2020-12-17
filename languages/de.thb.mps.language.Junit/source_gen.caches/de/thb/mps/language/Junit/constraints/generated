@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="ar3tf7ugegkfttvgqufvgrbhnhr3zvv">
-  <files names="ConstraintsAspectDescriptor.java" />
+<product version="3" modelHash="-43fmv6h7e8coezc1xqbld3x7zo9q0ff">
+  <files names="ConstraintsAspectDescriptor.java:EqualsAssertReference_Constraints.java" />
 </product>
 

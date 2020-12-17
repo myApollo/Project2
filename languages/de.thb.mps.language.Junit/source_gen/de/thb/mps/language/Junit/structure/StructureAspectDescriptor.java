@@ -10,10 +10,10 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEqualsAssert = createDescriptorForEqualsAssert();
+  /*package*/ final ConceptDescriptor myConceptEqualsAssertReference = createDescriptorForEqualsAssertReference();
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
   /*package*/ final ConceptDescriptor myConceptTestCase = createDescriptorForTestCase();
   /*package*/ final ConceptDescriptor myConceptTestedClass = createDescriptorForTestedClass();
@@ -27,12 +27,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.extendedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
     deps.aggregatedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptEqualsAssert, myConceptTest, myConceptTestCase, myConceptTestedClass);
+    return Arrays.asList(myConceptEqualsAssert, myConceptEqualsAssertReference, myConceptTest, myConceptTestCase, myConceptTestedClass);
   }
 
   @Override
@@ -41,6 +42,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.EqualsAssert:
         return myConceptEqualsAssert;
+      case LanguageConceptSwitch.EqualsAssertReference:
+        return myConceptEqualsAssertReference;
       case LanguageConceptSwitch.Test:
         return myConceptTest;
       case LanguageConceptSwitch.TestCase:
@@ -61,19 +64,30 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("de.thb.mps.language.Junit", "EqualsAssert", 0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x3f0975e1512812e4L);
     b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xf61473f9130f42f6L, 0xb98d6c438812c2f6L, 0x11b27438a3dL);
     b.origin("r:a1313390-1f80-45c5-b34f-f9c50e94f34a(de.thb.mps.language.Junit.structure)/4542291309769528036");
     b.version(2);
-    b.property("expectedResult", 0x657a42f517d53cfL).type(PrimitiveTypeId.INTEGER).origin("457014410338980815").done();
-    b.associate("method", 0x657a42f517d53d1L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x6c6b6a1e379f9408L).optional(true).origin("457014410338980817").done();
+    b.associate("methode", 0x40ad2a1905b2cb37L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x6c6b6a1e379f9408L).optional(true).origin("4660427476356483895").done();
     b.aggregate("parameter", 0x657a42f51800fe1L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(true).ordered(true).multiple(true).origin("457014410339160033").done();
+    b.aggregate("expectedResult", 0x40ad2a1905597779L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(true).ordered(true).multiple(true).origin("4660427476350629753").done();
     b.alias("Equals-check");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEqualsAssertReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("de.thb.mps.language.Junit", "EqualsAssertReference", 0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x511728d921a134bdL);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.baseLanguage.structure.Expression", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL);
+    b.origin("r:a1313390-1f80-45c5-b34f-f9c50e94f34a(de.thb.mps.language.Junit.structure)/5843183954573735101");
+    b.version(2);
+    b.associate("field", 0x511728d921a16655L).target(0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x3f0975e1512812e4L).optional(false).origin("5843183954573747797").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTest() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("de.thb.mps.language.Junit", "Test", 0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x657a42f517d5991L);
     b.class_(false, false, true);
-    b.super_("de.thb.mps.language.Junit.structure.TestCase", 0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x7e3e2ca0aa4169eaL);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xf61473f9130f42f6L, 0xb98d6c438812c2f6L, 0x11b2709bd56L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:a1313390-1f80-45c5-b34f-f9c50e94f34a(de.thb.mps.language.Junit.structure)/457014410338982289");
     b.version(2);
     b.associate("metodToTest", 0x657a42f517f8abaL).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x6c6b6a1e379f9408L).optional(true).origin("457014410339125946").done();
@@ -84,8 +98,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForTestCase() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("de.thb.mps.language.Junit", "TestCase", 0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x7e3e2ca0aa4169eaL);
-    b.class_(false, false, true);
+    b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xf61473f9130f42f6L, 0xb98d6c438812c2f6L, 0x11b27438a3dL);
     b.origin("r:a1313390-1f80-45c5-b34f-f9c50e94f34a(de.thb.mps.language.Junit.structure)/9096757365897783786");
     b.version(2);
     b.associate("assertEquals", 0x657a42f517d5f1aL).target(0xf61473f9130f42f6L, 0xb98d6c438812c2f6L, 0x110df569442L).optional(true).origin("457014410338983706").done();
@@ -96,6 +111,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("de.thb.mps.language.Junit", "TestedClass", 0xae5a850eba764e7bL, 0xa659ee8de6219557L, 0x657a42f5181d7d5L);
     b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xf61473f9130f42f6L, 0xb98d6c438812c2f6L, 0x11b27438a3dL);
     b.origin("r:a1313390-1f80-45c5-b34f-f9c50e94f34a(de.thb.mps.language.Junit.structure)/457014410339276757");
     b.version(2);
     return b.create();
