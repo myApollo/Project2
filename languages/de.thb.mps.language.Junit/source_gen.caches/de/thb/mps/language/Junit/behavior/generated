@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="3jw1t02hs7tgkn2ftcn9pi3fjapyxl8" />
+<product version="3" modelHash="-1wxg06vlks6v1vqygn5p6wscosnhpq6">
+  <files names="BehaviorAspectDescriptor.java:EqualsAssert__BehaviorDescriptor.java:TestCase__BehaviorDescriptor.java:Test__BehaviorDescriptor.java:TestedClass__BehaviorDescriptor.java" />
+</product>
 

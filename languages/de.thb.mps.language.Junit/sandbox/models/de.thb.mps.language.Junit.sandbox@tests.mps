@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:3f55ce5e-2ce7-4540-b143-48b6a50d2dc1(de.thb.mps.language.Junit.sandbox)">
+<model ref="r:25424a9e-8a1c-4964-acb3-b5c42c807faa(de.thb.mps.language.Junit.sandbox@tests)">
   <persistence version="9" />
   <languages>
+    <use id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test" version="5" />
+    <use id="f61473f9-130f-42f6-b98d-6c438812c2f6" name="jetbrains.mps.baseLanguage.unitTest" version="1" />
     <use id="ae5a850e-ba76-4e7b-a659-ee8de6219557" name="de.thb.mps.language.Junit" version="0" />
   </languages>
   <imports>
-    <import index="rjhg" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:org.junit(JUnit/)" />
-    <import index="u132" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:junit.framework(JUnit/)" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -15,14 +16,14 @@
       </concept>
     </language>
     <language id="ae5a850e-ba76-4e7b-a659-ee8de6219557" name="de.thb.mps.language.Junit">
-      <concept id="9096757365897783786" name="de.thb.mps.language.Junit.structure.TestCase" flags="ng" index="3kvOla">
-        <child id="457014410338983681" name="test" index="1naJGI" />
-      </concept>
       <concept id="457014410338982289" name="de.thb.mps.language.Junit.structure.Test" flags="ng" index="1naJQY">
         <child id="457014410338983650" name="equalsCheck" index="1naJFd" />
+        <child id="457014410339276760" name="testedClass" index="1nPBfR" />
       </concept>
+      <concept id="457014410339276757" name="de.thb.mps.language.Junit.structure.TestedClass" flags="ng" index="1nPBfU" />
       <concept id="4542291309769528036" name="de.thb.mps.language.Junit.structure.EqualsAssert" flags="ng" index="1I8ms5">
-        <property id="457014410338980815" name="expectedResult" index="1naJvw" />
+        <reference id="4660427476356483895" name="methode" index="157Y4I" />
+        <child id="4660427476350629753" name="expectedResult" index="15X5Pw" />
         <child id="457014410339160033" name="parameter" index="1nPUJe" />
       </concept>
     </language>
@@ -35,26 +36,25 @@
       </concept>
     </language>
   </registry>
-  <node concept="3kvOla" id="3W9tu5h9Zk_">
-    <property role="TrG5h" value="RechnerTest" />
-    <node concept="1naJQY" id="pnD2XhvJmJ" role="1naJGI">
+  <node concept="1naJQY" id="7IHZy0qYuUK">
+    <property role="TrG5h" value="Rechnertest" />
+    <node concept="1nPBfU" id="7IHZy0qYuVw" role="1nPBfR">
       <property role="TrG5h" value="Rechner" />
-      <property role="OYnhT" value="Test of the Method addition" />
-      <node concept="1I8ms5" id="pnD2XhvJmN" role="1naJFd">
-        <property role="1naJvw" value="5" />
-        <property role="OYnhT" value="3 + 2 = 5" />
-        <node concept="3cmrfG" id="pnD2Xhw4n5" role="1nPUJe">
-          <property role="3cmrfH" value="2" />
-        </node>
-        <node concept="3cmrfG" id="pnD2Xhw4M1" role="1nPUJe">
-          <property role="3cmrfH" value="3" />
-        </node>
+    </node>
+    <node concept="1I8ms5" id="7IHZy0qYuVb" role="1naJFd">
+      <property role="TrG5h" value="additiontest" />
+      <property role="OYnhT" value="4+3=7" />
+      <ref role="157Y4I" to="wyt6:~Math.subtractExact(int,int)" resolve="addition" />
+      <node concept="3cmrfG" id="7IHZy0qYuVd" role="1nPUJe">
+        <property role="3cmrfH" value="4" />
+      </node>
+      <node concept="3cmrfG" id="7IHZy0qYuVl" role="1nPUJe">
+        <property role="3cmrfH" value="3" />
+      </node>
+      <node concept="3cmrfG" id="7IHZy0qYuVr" role="15X5Pw">
+        <property role="3cmrfH" value="7" />
       </node>
     </node>
-  </node>
-  <node concept="3kvOla" id="79wRqA8imNw">
-    <property role="TrG5h" value="Test" />
-    <node concept="1naJQY" id="79wRqA8imNx" role="1naJGI" />
   </node>
 </model>
 
