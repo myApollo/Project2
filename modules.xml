@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/de.thb.mps.language.Junit/de.thb.mps.language.Junit.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.thb.mps.language.Junit/sandbox/de.thb.mps.language.Junit.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
