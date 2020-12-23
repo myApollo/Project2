@@ -1,0 +1,23 @@
+# MacOS user UI setting related file
+.DS_Store
+
+# Intellij Idea user workspace setting files
+**/.idea/workspace.xml
+**/.mps/workspace.xml
+/build/solution/.idea/workspace.xml
+/MPSPlugin/.idea/workspace.xml
+
+# Local user commits
+**/.idea/shelf
+**/.mps/shelf
+
+# Build artifacts
+classes
+classes_gen
+testclasses
+teamcity-info.xml
+*.hprof
+*.class
+
+source_gen
+source_gen.caches
