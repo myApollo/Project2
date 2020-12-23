@@ -7,10 +7,9 @@
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
-    <import index="rjhg" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:org.junit(JUnit/)" />
+    <import index="tpe3" ref="r:00000000-0000-4000-0000-011c895902d7(jetbrains.mps.baseLanguage.unitTest.structure)" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="tpe3" ref="r:00000000-0000-4000-0000-011c895902d7(jetbrains.mps.baseLanguage.unitTest.structure)" implicit="true" />
-    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -72,17 +71,16 @@
     <property role="EcuMT" value="4542291309769528036" />
     <property role="TrG5h" value="EqualsAssert" />
     <property role="34LRSv" value="Equals-check" />
-    <property role="R4oN_" value="Check if the method returns the expected result" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="pnD2Xhvlff" role="1TKVEl">
-      <property role="IQ2nx" value="457014410338980815" />
-      <property role="TrG5h" value="expectedResult" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyj" id="pnD2Xhvlfh" role="1TKVEi">
-      <property role="IQ2ns" value="457014410338980817" />
-      <property role="20kJfa" value="method" />
+    <node concept="1TJgyj" id="5eKUb7Dh_7a" role="1TKVEi">
+      <property role="IQ2ns" value="6030575751869649354" />
+      <property role="20kJfa" value="methoden" />
       <ref role="20lvS9" to="tpee:6LFqxSRBTg8" resolve="MethodDeclaration" />
+    </node>
+    <node concept="1TJgyi" id="7IHZy0r3ucY" role="1TKVEl">
+      <property role="IQ2nx" value="8912058651482383166" />
+      <property role="TrG5h" value="description" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="PrWs8" id="pnD2XhvWVJ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -90,8 +88,14 @@
     <node concept="1TJgyj" id="pnD2Xhw0Zx" role="1TKVEi">
       <property role="IQ2ns" value="457014410339160033" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="parameter" />
+      <property role="20kJfa" value="parameters" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="42Hax$5mntT" role="1TKVEi">
+      <property role="IQ2ns" value="4660427476350629753" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="expectedResult" />
       <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
     </node>
   </node>
@@ -101,7 +105,7 @@
     <property role="34LRSv" value="Test class" />
     <property role="R4oN_" value="name of the test class" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" node="7SYba2EgmBE" resolve="TestCase" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="pnD2XhvlVy" role="1TKVEi">
       <property role="IQ2ns" value="457014410338983650" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -113,16 +117,23 @@
       <property role="IQ2ns" value="457014410339276760" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="testedClass" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="pnD2Xhwtvl" resolve="TestedClass" />
     </node>
     <node concept="PrWs8" id="pnD2XhvlVZ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyj" id="pnD2XhvSEU" role="1TKVEi">
-      <property role="IQ2ns" value="457014410339125946" />
-      <property role="20kJfa" value="metodToTest" />
-      <ref role="20lvS9" to="tpee:6LFqxSRBTg8" resolve="MethodDeclaration" />
+    <node concept="PrWs8" id="54nad$xDD$I" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="1TJgyi" id="5eKUb7Dw13f" role="1TKVEl">
+      <property role="IQ2nx" value="6030575751873433807" />
+      <property role="TrG5h" value="description" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5eKUb7DEcH$" role="1TKVEl">
+      <property role="IQ2nx" value="6030575751876103012" />
+      <property role="TrG5h" value="methodeName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="pnD2Xhwtvl">
@@ -131,6 +142,17 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="pnD2Xhwtvm" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="54nad$xCjiX">
+    <property role="EcuMT" value="5843183954573735101" />
+    <property role="TrG5h" value="EqualsAssertReference" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="54nad$xCmpl" role="1TKVEi">
+      <property role="IQ2ns" value="5843183954573747797" />
+      <property role="20kJfa" value="field" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3W9tu5ha1b$" resolve="EqualsAssert" />
     </node>
   </node>
 </model>
